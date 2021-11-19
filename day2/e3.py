@@ -22,8 +22,8 @@ if can_ride:
         ticket +=7
     elif age <= 45:
         ticket += 9
-    photo = input("Do you want a photo?: (y/n)").lower()
-    if photo == "y":
+    #photo = input("Do you want a photo?: (y/n)").lower()
+    if input("Do you want a photo?: (y/n)").lower() == "y":
         ticket +=3
     print(f"you have to pay {ticket}")
 elif not can_ride:
