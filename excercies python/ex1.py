@@ -1,12 +1,21 @@
-print("Welcome to treasure island your mission is to find the trasure.")
+print("Welcome to Treasure island. Your mission is to find the treasure.")
 
 game = input("left or rigth? (l/r)").lower()
 
 if game == "l":
-    if input("swim or wait? (s/w)").lower() == "w":
+    game = input("swim or wait? (s/w)").lower()
+    if game == "w":
+        game = input("Which door? (Red,Yellow,Blue)").lower()
+        if game == "red":
+            print("Burned by fire. Game Over.")
+        elif game == "yellow":
+            print("You win!")
+        elif game == "blue":
+            print("Eaten by beasts. Game Over.")
+        else:
+            print("Game Over.")
     else:
-        print("Attacked by trout/ GAMA OVER")
-        if input("which door, red or blue? (r/b)").lower() == 
+        print("Attacked by trout. Game Over.")
 else:
-    print("Fall into a hole / GAME OVER")
+    print("Fall into a hole. Game Over.")
     
