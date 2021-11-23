@@ -31,6 +31,9 @@ list = [rock,paper,scissors]
 choice = int(input("Make a choice 0-rock, 1-paper, 2-scissors"))
 computer = random.randint(0,2)
 
+#choice = 2
+#computer = 0
+
 if choice == 0 and computer == 2:
     print("you win")
 elif computer == 0 and choice == 2:
