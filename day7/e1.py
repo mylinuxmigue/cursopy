@@ -1,5 +1,4 @@
 from art import logo
-
 alphabet = ['a', 'b', 'c', 'd', 'e', 
 'f', 'g', 'h', 'i', 'j', 'k', 'l', 
 'm', 'n', 'o', 'p', 'q', 'r', 's',
@@ -17,7 +16,7 @@ def caesar(selection, shift, start_text):
         if char in alphabet:
             position = alphabet.index(char)
             new_position = position + shift
-            end_text = end_text + alphabet(new_position)
+            end_text = end_text + alphabet[new_position]
     return end_text
 
 print(logo)
