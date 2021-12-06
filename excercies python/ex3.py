@@ -4,7 +4,7 @@ def find_number (numbers, select):
             return True
     return False
 numbers = [1,2,5]
-select = print(input("dame un valor para comparar: "))
+select = int(input("dame un valor para comparar: "))
 print(find_number(numbers,select))
 
 
