@@ -4,7 +4,6 @@ game = input("left or rigth? (l/r)").lower()
 
 if game == "l":
     game = input("swim or wait? (s/w)").lower()
-<<<<<<< HEAD
     if  game == "w":
         game = (input("whitch door? (blue, red, yellow)")).lower()
         if game == "blue":

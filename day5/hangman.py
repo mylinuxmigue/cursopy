@@ -1,4 +1,6 @@
 import random
+
+
 stages = ['''
   +---+
   |   |
@@ -56,41 +58,53 @@ stages = ['''
 =========
 ''']
 
-word_list = ['hangman','keyboard', 'computer','python','airplane','spiderman']
-chosen_word = random.choice(word_list)
-print(chosen_word)
-display = []
 
-''''for char in chosen_word:
-    display.append("_")'''
-for char in range(len(chosen_word)):
-    display.append("_")
+def random_choice_word():
+    word_list = ['hangman','keyboard', 'computer','python','airplane','spiderman']
+    return random.choice(word_list)
 
-end_of_game = True
-lives = 6
+def create_display(chosen_word):
+    display = []
 
-while end_of_game:
-    guess = input("Guess a letter: ").lower()
+    for char in range(len(chosen_word)):
+        display.append("_")
 
-    for position in range(len(chosen_word)):
-        letter = chosen_word[position]
+    return display
 
-        if letter == guess:
-            display[position] = letter
-    if guess not in chosen_word:
-        lives -= 1
-        print(stages[lives])
-        print(f"You have {lives} lives")
-        if lives == 0:
+def check_character(chosen_word,display,stages):
+    end_of_game = True
+    lives = 6
+
+    while end_of_game:
+        guess = input("Guess a letter: ").lower()
+  
+        
+        for position in range(len(chosen_word)):
+            letter = chosen_word[position]
+
+            if letter == guess:
+                display[position] = letter
+
+        if guess not in chosen_word:
+            lives -= 1
+            print(stages[lives])
+            print(f"You have {lives} lives")
+            if lives == 0:
+                end_of_game = False
+                print("You lose")
+        print(display)
+
+        if "_" not in display:
             end_of_game = False
-            print("Ypu lose")
-    print(display)
+            print("You win")
+            final_word = ''
+            for element in display:
+                final_word += element
+            print(f"Secret word was  {final_word}")        
 
-    if "_" not in display:
-        end_of_game = False
-        print("You win")
-        final_word = ''
-        for element in display:
-            final_word += element
-        print(f"Secret word was  {final_word}")        
+choisen_word = random_choice_word()
+print(choisen_word)
+display_out_function = create_display(choisen_word)
+print(display_out_function)
+check_character(choisen_word,display_out_function,stages)
     
