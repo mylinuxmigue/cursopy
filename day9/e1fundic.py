@@ -1,4 +1,5 @@
 import os
+import time
 def add(x,y):
     return x+y
 
@@ -33,4 +34,5 @@ for _ in range(0,3):
     elif symbol not in symbol_list:
         print('invalid symbol')
 
+    time.sleep(5)
     os.system('cls') 
