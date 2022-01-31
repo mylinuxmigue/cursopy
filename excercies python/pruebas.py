@@ -1,4 +1,3 @@
-
 '''dictionary_operations = {'+':'sum',
                          '-':'subtract',
                          '*':'multiplication',
@@ -6,11 +5,11 @@
 
 for _ in dictionary_operations:
     print(dictionary_operations[_])
+'''
 
-
-result = "hola"
+"""result = "hola"
 for a in result:
-    print(a)'''
+    print(a)"""
 
 """def find(list_,num_):
     for num in list_:  
@@ -76,11 +75,23 @@ for key in dictionary:
     print(key)
     print(dictionary[key])'''
 
-from game_data2.0 
+'''c0 = int(input('cualquier numero entero positivo: '))
+c1 = 0
+list = (f'')
+while c0 != 1:
+    if c0 % 2 == 0:
+        c0 = c0/2
+    else:
+        c0 = 3 * c0 +1 
+    list =+ c0
+    print(list)
+    c1+=1
+    print(f'pruebas ={c1}')
+'''
 
-
-
-
+numbers = [1,2,3,4,5,6]
+for num in range(len(numbers)-1,10):
+    print(num)
 
 
 
